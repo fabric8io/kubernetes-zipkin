@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (C) 2016 to origin authors.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>zipkin-project</artifactId>
+        <groupId>io.fabric8</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.fabric8.zipkin</groupId>
+    <artifactId>zipkin-web</artifactId>
+    <name>Fabric8 :: Zipkin :: Web</name>
+
+    <properties>
+        <docker.image>openzipkin/zipkin-web:${zipkin.version}</docker.image>
+
+        <fabric8.env.TRANSPORT_TYPE>http</fabric8.env.TRANSPORT_TYPE>
+        <fabric8.env.QUERY_PORT_9411_TCP_ADDR>zipkin-query:9411</fabric8.env.QUERY_PORT_9411_TCP_ADDR>
+        <fabric8.service.name>${project.artifactId}</fabric8.service.name>
+        <fabric8.service.zipkin-collector.port.http>8080</fabric8.service.zipkin-collector.port.http>
+        <fabric8.service.zipkin-collector.containerPort.http>8080</fabric8.service.zipkin-collector.containerPort.http>
+        <fabric8.service.zipkin-collector.port.admin>9900</fabric8.service.zipkin-collector.port.admin>
+        <fabric8.service.zipkin-collector.containerPort.admin>9900
+        </fabric8.service.zipkin-collector.containerPort.admin>
+        <fabric8.service.zipkin-collector.type>LoadBalancer</fabric8.service.zipkin-collector.type>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>io.fabric8</groupId>
+                <artifactId>fabric8-maven-plugin</artifactId>
+                <version>${fabric8.version}</version>
+                <executions>
+                    <execution>
+                        <id>json</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>json</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
