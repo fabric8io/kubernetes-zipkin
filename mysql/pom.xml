@@ -49,6 +49,7 @@
                         <phase>generate-resources</phase>
                         <goals>
                             <goal>json</goal>
+                            <goal>attach</goal>
                         </goals>
                     </execution>
                 </executions>

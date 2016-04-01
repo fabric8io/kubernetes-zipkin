@@ -77,12 +77,12 @@
 
     <properties>
         <!-- Dependency Versions -->
-        <fabric8.version>2.2.98</fabric8.version>
+        <fabric8.version>2.2.101-SNAPSHOT</fabric8.version>
         <zipkin.version>1.37.0</zipkin.version>
 
         <!-- Maven Plugin Versions -->
         <docker-maven-plugin.version>0.14.2</docker-maven-plugin.version>
-        <fabric8-maven-plugin.version>2.2.98</fabric8-maven-plugin.version>
+        <fabric8-maven-plugin.version>2.2.101</fabric8-maven-plugin.version>
         <maven-compiler-plugin.version>3.5</maven-compiler-plugin.version>
     </properties>
 
@@ -92,6 +92,7 @@
         <module>web</module>
         <module>query</module>
         <module>mysql</module>
+        <module>starter</module>
     </modules>
 
     <build>
@@ -105,6 +106,11 @@
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>io.fabric8</groupId>
+                <artifactId>fabric8-maven-plugin</artifactId>
+                <version>${fabric8.version}</version>
             </plugin>
         </plugins>
     </build>
@@ -202,7 +208,7 @@
             </build>
         </profile>
         <profile>
-            <id>docker</id>
+            <id>f8-build</id>
             <build>
                 <plugins>
                     <plugin>

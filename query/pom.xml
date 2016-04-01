@@ -46,6 +46,16 @@
         <fabric8.service.zipkin-query.type>LoadBalancer</fabric8.service.zipkin-query.type>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>io.fabric8.zipkin</groupId>
+            <artifactId>zipkin-mysql</artifactId>
+            <version>${project.version}</version>
+            <classifier>kubernetes</classifier>
+            <type>json</type>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -58,6 +68,7 @@
                         <phase>generate-resources</phase>
                         <goals>
                             <goal>json</goal>
+                            <goal>attach</goal>
                         </goals>
                     </execution>
                 </executions>
