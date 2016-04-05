@@ -42,11 +42,12 @@
         <fabric8.env.STORAGE_PORT_3306_TCP_ADDR>zipkin-mysql:3306</fabric8.env.STORAGE_PORT_3306_TCP_ADDR>
 
         <fabric8.service.name>${project.artifactId}</fabric8.service.name>
-        <fabric8.service.zipkin-collector.port.thrift>9410</fabric8.service.zipkin-collector.port.thrift>
-        <fabric8.service.zipkin-collector.containerPort.thrift>9410</fabric8.service.zipkin-collector.containerPort.thrift>
-        <fabric8.service.zipkin-collector.port.admin>9900</fabric8.service.zipkin-collector.port.admin>
-        <fabric8.service.zipkin-collector.containerPort.admin>9900</fabric8.service.zipkin-collector.containerPort.admin>
-        <fabric8.service.zipkin-collector.type>LoadBalancer</fabric8.service.zipkin-collector.type>
+        <fabric8.service.zipkin-collector-thrift.port>9410</fabric8.service.zipkin-collector-thrift.port>
+        <fabric8.service.zipkin-collector-thrift.containerPort>9410</fabric8.service.zipkin-collector-thrift.containerPort>
+        <fabric8.service.zipkin-collector-thrift.type>LoadBalancer</fabric8.service.zipkin-collector-thrift.type>
+        <fabric8.service.zipkin-collector-admin.port>9900</fabric8.service.zipkin-collector-admin.port>
+        <fabric8.service.zipkin-collector-admin.containerPort>9900</fabric8.service.zipkin-collector-admin.containerPort>
+        <fabric8.service.zipkin-collector-admin.type>LoadBalancer</fabric8.service.zipkin-collector-admin.type>
     </properties>
 
     <dependencies>

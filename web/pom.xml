@@ -33,14 +33,15 @@
         <docker.image>openzipkin/zipkin-web:${zipkin.version}</docker.image>
 
         <fabric8.env.TRANSPORT_TYPE>http</fabric8.env.TRANSPORT_TYPE>
-        <fabric8.env.QUERY_PORT_9411_TCP_ADDR>zipkin-query</fabric8.env.QUERY_PORT_9411_TCP_ADDR>
+        <fabric8.env.QUERY_PORT_9411_TCP_ADDR>zipkin-query-api</fabric8.env.QUERY_PORT_9411_TCP_ADDR>
         <fabric8.service.name>${project.artifactId}</fabric8.service.name>
-        <fabric8.service.zipkin-web.port.http>8080</fabric8.service.zipkin-web.port.http>
-        <fabric8.service.zipkin-web.containerPort.http>8080</fabric8.service.zipkin-web.containerPort.http>
-        <fabric8.service.zipkin-web.port.admin>9900</fabric8.service.zipkin-web.port.admin>
-        <fabric8.service.zipkin-web.containerPort.admin>9900
-        </fabric8.service.zipkin-web.containerPort.admin>
-        <fabric8.service.zipkin-web.type>LoadBalancer</fabric8.service.zipkin-web.type>
+        <fabric8.service.zipkin-web-console.port>8080</fabric8.service.zipkin-web-console.port>
+        <fabric8.service.zipkin-web-console.containerPort>8080</fabric8.service.zipkin-web-console.containerPort>
+        <fabric8.service.zipkin-web-console.type>LoadBalancer</fabric8.service.zipkin-web-console.type>
+        <fabric8.service.zipkin-web-admin.port>9900</fabric8.service.zipkin-web-admin.port>
+        <fabric8.service.zipkin-web-admin.containerPort>9900</fabric8.service.zipkin-web-admin.containerPort>
+        <fabric8.service.zipkin-web-admin.type>LoadBalancer</fabric8.service.zipkin-web-admin.type>
+
     </properties>
 
     <dependencies>
