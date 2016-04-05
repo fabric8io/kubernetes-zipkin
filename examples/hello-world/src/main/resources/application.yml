@@ -1,0 +1,15 @@
+spring:
+  application:
+    # This ends up as the service name in zipkin
+    name: helloworld
+  zipkin:
+    # We don't need to specify the baseUrl of the zipkin-query-api as it will be discovered via DiscoveryClient.
+    #baseUrl: http://172.30.204.154:9411/
+  sleuth:
+    sampler:
+      percentage: 1.0
+
+sample:
+  zipkin:
+    # When enabled=false, traces log to the console. Comment to send to zipkin
+    enabled: true
