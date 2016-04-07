@@ -31,7 +31,7 @@
     <description>Zipkin Package</description>
 
     <properties>
-        <ipaas.version>2.2.103</ipaas.version>
+        <ipaas.version>2.2.108</ipaas.version>
         <fabric8.combineDependencies>true</fabric8.combineDependencies>
     </properties>
 

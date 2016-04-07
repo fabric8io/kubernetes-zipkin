@@ -38,15 +38,15 @@ Currently the available starters are:
 
 The mysql starter will generate and install Zipkin using MySQL as a storage module.
 
-    mvn clean install
+    mvn clean install -Pdocker
     mvn fabric8:apply -pl starter-mysql
 
 The first command will build the whole project and the second will apply the resources to kubernetes (including its dependencies).
-So after using the above in a clean workspace, your workspace should look like this:   
+So after using the above in a clean workspace, your workspace should look like this:
 
-    
+
     kubectl get pods
-    
+
 NAME | READY|STATUS|RESTARTS|AGE
 -----|------|------|--------|---
 kafka-qw13r|1/1|Running|0|8m
@@ -55,7 +55,7 @@ zipkin-mysql-ygm1g|1/1|Running|0|8m
 zipkin-query-roxae|1/1|Running|0|8m
 zookeeper-1-my183|1/1|Running|0|8m
 zookeeper-2-jx8eq|1/1|Running|0|8m
-zookeeper-3-d1icz|1/1|Running|0|8m    
+zookeeper-3-d1icz|1/1|Running|0|8m
 
 #### Minimal Starter
 
@@ -63,9 +63,9 @@ The minimal starter will generate and install a Zipkin without a collector and u
 
     mvn clean install
     mvn fabric8:apply -pl starter-minimal
-        
-This time the zipkin-collector, kafka and zookeeper will not be installed at all.    
-    
+
+This time the zipkin-collector, kafka and zookeeper will not be installed at all.
+
 NAME | READY|STATUS|RESTARTS|AGE
 -----|------|------|--------|---
 zipkin-mysql-d4msa|1/1|Running|0|8m
