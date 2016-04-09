@@ -26,9 +26,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.fabric8.zipkin</groupId>
-    <artifactId>zipkin-starter</artifactId>
-    <name>Fabric8 :: Zipkin :: Starter (Default)</name>
-    <description>Starter module for installing Zipkin into Kubernetes. Its pretty much a copy of starter-mysql</description>
+    <artifactId>zipkin-starter-mysql</artifactId>
+    <name>Fabric8 :: Zipkin :: Starter :: MySQL</name>
+    <description>Starter module for installing Zipkin into Kubernetes</description>
 
     <properties>
         <ipaas.version>2.2.103</ipaas.version>

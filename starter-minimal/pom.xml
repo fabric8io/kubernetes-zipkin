@@ -26,23 +26,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.fabric8.zipkin</groupId>
-    <artifactId>zipkin-starter</artifactId>
-    <name>Fabric8 :: Zipkin :: Starter (Default)</name>
-    <description>Starter module for installing Zipkin into Kubernetes. Its pretty much a copy of starter-mysql</description>
-
-    <properties>
-        <ipaas.version>2.2.103</ipaas.version>
-    </properties>
+    <artifactId>zipkin-starter-mninimal</artifactId>
+    <name>Fabric8 :: Zipkin :: Starter :: Minimal</name>
+    <description>Starter module for installing Zipkin (minimal) into Kubernetes.</description>
 
     <dependencies>
-        <dependency>
-            <groupId>io.fabric8.zipkin</groupId>
-            <artifactId>zipkin-collector</artifactId>
-            <version>${project.version}</version>
-            <classifier>kubernetes</classifier>
-            <type>json</type>
-        </dependency>
-
         <dependency>
             <groupId>io.fabric8.zipkin</groupId>
             <artifactId>zipkin-query</artifactId>
@@ -67,22 +55,6 @@
             <type>json</type>
         </dependency>
 
-        <!-- We also need ZooKeeper and Kafka and we'll just used them from ipaas -->
-        <dependency>
-            <groupId>io.fabric8.ipaas.apps</groupId>
-            <artifactId>zookeeper</artifactId>
-            <version>${ipaas.version}</version>
-            <classifier>kubernetes</classifier>
-            <type>json</type>
-        </dependency>
-
-        <dependency>
-            <groupId>io.fabric8.ipaas.apps</groupId>
-            <artifactId>kafka</artifactId>
-            <version>${ipaas.version}</version>
-            <classifier>kubernetes</classifier>
-            <type>json</type>
-        </dependency>
     </dependencies>
 
     <build>
