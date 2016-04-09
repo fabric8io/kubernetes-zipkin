@@ -93,6 +93,8 @@
         <module>query</module>
         <module>mysql</module>
         <module>starter</module>
+        <module>starter-mysql</module>
+        <module>starter-minimal</module>
         <module>examples</module>
     </modules>
 
