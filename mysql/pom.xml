@@ -28,6 +28,7 @@
     <groupId>io.fabric8.zipkin</groupId>
     <artifactId>zipkin-mysql</artifactId>
     <name>Fabric8 :: Zipkin :: MySQL</name>
+    <description>Zipkin MySQL storage</description>
 
     <properties>
         <docker.image>openzipkin/zipkin-mysql:${zipkin.version}</docker.image>

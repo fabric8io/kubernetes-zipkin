@@ -28,6 +28,7 @@
     <groupId>io.fabric8.zipkin</groupId>
     <artifactId>zipkin-query</artifactId>
     <name>Fabric8 :: Zipkin :: Query</name>
+    <description>Zipkin query service</description>
 
     <properties>
         <docker.image>openzipkin/zipkin-query:${zipkin.version}</docker.image>

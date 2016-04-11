@@ -30,6 +30,7 @@
     <artifactId>zipkin-collector</artifactId>
     <packaging>jar</packaging>
     <name>Fabric8 :: Zipkin :: Collector</name>
+    <description>Zipkin collector service</description>
 
     <properties>
         <docker.image>openzipkin/zipkin-collector:${zipkin.version}</docker.image>

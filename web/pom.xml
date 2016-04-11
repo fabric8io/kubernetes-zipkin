@@ -28,6 +28,7 @@
     <groupId>io.fabric8.zipkin</groupId>
     <artifactId>zipkin-web</artifactId>
     <name>Fabric8 :: Zipkin :: Web</name>
+    <description>Zipkin Web Console</description>
 
     <properties>
         <docker.image>openzipkin/zipkin-web:${zipkin.version}</docker.image>
