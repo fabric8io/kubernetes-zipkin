@@ -59,14 +59,6 @@
             <type>json</type>
         </dependency>
 
-        <dependency>
-            <groupId>io.fabric8.zipkin</groupId>
-            <artifactId>zipkin-web</artifactId>
-            <version>${project.version}</version>
-            <classifier>kubernetes</classifier>
-            <type>json</type>
-        </dependency>
-
         <!-- We also need ZooKeeper and Kafka and we'll just used them from ipaas -->
         <dependency>
             <groupId>io.fabric8.ipaas.apps</groupId>

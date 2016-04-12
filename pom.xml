@@ -89,7 +89,6 @@
 
     <modules>
         <module>collector</module>
-        <module>web</module>
         <module>query</module>
         <module>mysql</module>
         <module>starter</module>
