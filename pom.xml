@@ -78,7 +78,7 @@
     <properties>
         <!-- Dependency Versions -->
         <fabric8.version>2.2.101</fabric8.version>
-        <zipkin.version>1.37.0</zipkin.version>
+        <zipkin.version>1.39.3</zipkin.version>
 
         <!-- Maven Plugin Versions -->
         <docker-maven-plugin.version>0.14.2</docker-maven-plugin.version>
