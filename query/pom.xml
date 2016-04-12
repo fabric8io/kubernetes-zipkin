@@ -42,9 +42,9 @@
         <fabric8.service.name>${project.artifactId}</fabric8.service.name>
 
         <!-- We use 2 services rather than a single to support spring's discovery client -->
-        <fabric8.service.zipkin-query-api.port>9411</fabric8.service.zipkin-query-api.port>
-        <fabric8.service.zipkin-query-api.containerPort>9411</fabric8.service.zipkin-query-api.containerPort>
-        <fabric8.service.zipkin-query-api.type>LoadBalancer</fabric8.service.zipkin-query-api.type>
+        <fabric8.service.zipkin-query.port>9411</fabric8.service.zipkin-query.port>
+        <fabric8.service.zipkin-query.containerPort>9411</fabric8.service.zipkin-query.containerPort>
+        <fabric8.service.zipkin-query.type>LoadBalancer</fabric8.service.zipkin-query.type>
         <fabric8.service.zipkin-query-admin.port>9901</fabric8.service.zipkin-query-admin.port>
         <fabric8.service.zipkin-query-admin.containerPort>9901</fabric8.service.zipkin-query-admin.containerPort>
         <fabric8.service.zipkin-query-admin.type>LoadBalancer</fabric8.service.zipkin-query-admin.type>
