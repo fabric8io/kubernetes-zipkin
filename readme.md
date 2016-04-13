@@ -30,7 +30,6 @@ kafka-qw13r|1/1|Running|0|8m
 zipkin-collector-5nopi|1/1|Running|0|8m
 zipkin-mysql-ygm1g|1/1|Running|0|8m
 zipkin-query-roxae|1/1|Running|0|8m
-zipkin-web-4dkm6|1/1|Running|0|8m
 zookeeper-1-my183|1/1|Running|0|8m
 zookeeper-2-jx8eq|1/1|Running|0|8m
 zookeeper-3-d1icz|1/1|Running|0|8m    
@@ -48,4 +47,11 @@ NAME | READY|STATUS|RESTARTS|AGE
 -----|------|------|--------|---
 zipkin-mysql-d4msa|1/1|Running|0|8m
 zipkin-query-rpxfw|1/1|Running|0|8m
-zipkin-web-rfgs3|1/1|Running|0|8m
+
+### Using the console
+
+Once the zipkin-query pod is ready, you will be able to access the console using the zipkin-query service.
+
+For example: http://zipkin-query-default.vagrant.f8 (here is how the external URL looks on openshift if zipkin-query service is available in the default namespace and the domain is vagrant.f8).
+
+![ZipKin Console](images/zipkin-console.png "Zipkin Console")
