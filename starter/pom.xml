@@ -32,6 +32,8 @@
 
     <properties>
         <ipaas.version>2.2.103</ipaas.version>
+        <fabric8.pureKubernetes>true</fabric8.pureKubernetes>
+        <fabric8.combineDependencies>true</fabric8.combineDependencies>
     </properties>
 
     <dependencies>
@@ -83,6 +85,16 @@
                 <groupId>io.fabric8</groupId>
                 <artifactId>fabric8-maven-plugin</artifactId>
                 <version>${fabric8.version}</version>
+                <executions>
+                    <execution>
+                        <id>json</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>json</goal>
+                            <goal>attach</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
