@@ -81,7 +81,7 @@
         <zipkin.version>1.39.3</zipkin.version>
 
         <!-- Maven Plugin Versions -->
-        <docker-maven-plugin.version>0.14.2</docker-maven-plugin.version>
+        <docker.maven.plugin.version>0.14.2</docker-maven-plugin.version>
         <fabric8-maven-plugin.version>2.2.101</fabric8-maven-plugin.version>
         <maven-compiler-plugin.version>3.5</maven-compiler-plugin.version>
     </properties>
