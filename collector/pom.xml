@@ -23,7 +23,7 @@
     <parent>
         <groupId>io.fabric8</groupId>
         <artifactId>zipkin-project</artifactId>
-        <version>0.1-SNAPSHOT</version>
+        <version>0.0.4</version>
     </parent>
 
     <groupId>io.fabric8.zipkin</groupId>
