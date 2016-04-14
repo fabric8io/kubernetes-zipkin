@@ -95,6 +95,7 @@
         <module>starter-mysql</module>
         <module>starter-minimal</module>
         <module>examples</module>
+        <module>packages</module>
     </modules>
 
     <build>
