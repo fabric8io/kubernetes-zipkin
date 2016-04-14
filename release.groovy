@@ -37,7 +37,7 @@ def release(project){
     groupId = 'io.fabric8.zipkin'
     githubOrganisation = 'fabric8io'
     artifactIdToWatchInCentral = 'zipkin-starter'
-    artifactExtensionToWatchInCentral = 'war'
+    artifactExtensionToWatchInCentral = 'jar'
     promoteToDockerRegistry = 'docker.io'
     dockerOrganisation = 'fabric8'
     imagesToPromoteToDockerHub = []
