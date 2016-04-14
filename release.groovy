@@ -2,7 +2,8 @@
 def updateDependencies(source){
 
   def properties = []
-  properties << ['<docker.maven.plugin.version>','io/fabric8/docker-maven-plugin']
+  properties << ['<fabric8-maven-plugin.version>','io/fabric8/fabric8-maven-plugin']
+  properties << ['<docker-maven-plugin.version>','io/fabric8/docker-maven-plugin']
 
   updatePropertyVersion{
     updates = properties
