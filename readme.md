@@ -1,11 +1,34 @@
 Kubernetes ZipKin
 -----------------
 
-The project generates all the required resources to start the required ZipKin components in Kubernetes
+The project provides all the required resources to start the required ZipKin components in Kubernetes.
 
 ### Getting Started
 
-The quicker way to get started is to just build the project and use the apply one of "starter" configurations.
+To install ZipKin in kubernetes you need to create the replication controllers and services that corresponds to the ZipKin components and their requirements.
+
+There are 2 ways of doing that:
+
+-   Direct installation
+-   Generating and installing via Maven
+
+### Direct installation
+
+To directly install everything you need:
+
+    kubectl create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter/0.0.4/zipkin-starter-0.0.4-kubernetes.yml
+
+To directly install a minimal ZipKin *(just storage and query)*:
+                        
+    kubectl create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter-mninimal/0.0.4/zipkin-starter-mninimal-0.0.4-kubernetes.yml
+
+Both of the above are released in json format too.   
+
+### Generating the configuration
+
+The configuration that was downloaded from the internet in the previous step can also be generated using the starter modules.
+The starter module are plain maven projects that generate and apply kubernetes/openshift configuration using the [Fabric8 Maven Plugin](http://fabric8.io/guide/mavenPlugin.html)
+
 Currently the available starters are:
 
 -   starter-mysql
