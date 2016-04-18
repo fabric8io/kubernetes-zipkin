@@ -31,7 +31,7 @@
     <description>Starter module for installing Zipkin into Kubernetes. Its pretty much a copy of starter-mysql</description>
 
     <properties>
-        <ipaas.version>2.2.103</ipaas.version>
+        <ipaas.version>2.2.108</ipaas.version>
         <fabric8.pureKubernetes>true</fabric8.pureKubernetes>
         <fabric8.combineDependencies>true</fabric8.combineDependencies>
     </properties>

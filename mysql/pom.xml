@@ -31,7 +31,10 @@
     <description>Zipkin MySQL storage</description>
 
     <properties>
-        <docker.image>openzipkin/zipkin-mysql:${zipkin.version}</docker.image>
+        <docker.maven.plugin.version>0.14.2</docker.maven.plugin.version>
+        <docker.from>openzipkin/zipkin-mysql:${zipkin.version}</docker.from>
+        <docker.image>fabric8/zipkin-mysql:${zipkin.version}</docker.image>
+
         <fabric8.service.name>${project.artifactId}</fabric8.service.name>
         <fabric8.service.zipkin-mysql.port>3306</fabric8.service.zipkin-mysql.port>
         <fabric8.service.zipkin-mysql.containerPort>3306</fabric8.service.zipkin-mysql.containerPort>
@@ -55,7 +58,32 @@
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>io.fabric8</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>${docker.maven.plugin.version}</version>
+                <configuration>
+                    <images>
+                        <image>
+                            <name>${docker.image}</name>
+                            <build>
+                                <from>${docker.from}</from>
+                                <entryPoint>
+                                    <exec>
+                                        <args>/usr/bin/mysqld</args>
+                                        <args>--basedir=/usr/</args>
+                                        <args>--datadir=/mysql/data</args>
+                                    </exec>
+                                </entryPoint>
+                                <runCmds>
+                                  <run>find /mysql -type d -exec chmod 777 {} \;</run>
+                                  <run>find /mysql -type f -exec chmod 666 {} \;</run>
+                                </runCmds>
+                            </build>
+                        </image>
+                    </images>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
-
 </project>
