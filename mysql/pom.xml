@@ -73,6 +73,7 @@
                                         <args>/usr/bin/mysqld</args>
                                         <args>--basedir=/usr/</args>
                                         <args>--datadir=/mysql/data</args>
+					<args>--user=root</args>
                                     </exec>
                                 </entryPoint>
                                 <runCmds>
