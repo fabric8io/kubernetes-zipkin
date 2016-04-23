@@ -16,11 +16,11 @@ There are 2 ways of doing that:
 
 To directly install everything you need:
 
-    kubectl create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter/0.0.4/zipkin-starter-0.0.4-kubernetes.yml
+    kubectl create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter/0.0.6/zipkin-starter-0.0.6-kubernetes.yml
 
 To directly install a minimal ZipKin *(just storage and query)*:
                         
-    kubectl create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter-minimal/0.0.4/zipkin-starter-minimal-0.0.4-kubernetes.yml
+    kubectl create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter-minimal/0.0.6/zipkin-starter-minimal-0.0.6-kubernetes.yml
 
 Both of the above are released in json format too.   
 
