@@ -82,7 +82,7 @@
 
         <!-- Maven Plugin Versions -->
         <docker-maven-plugin.version>0.14.2</docker-maven-plugin.version>
-        <fabric8-maven-plugin.version>2.2.105</fabric8-maven-plugin.version>
+        <fabric8-maven-plugin.version>2.2.109</fabric8-maven-plugin.version>
         <maven-compiler-plugin.version>3.5</maven-compiler-plugin.version>
     </properties>
 
