@@ -26,7 +26,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.fabric8.zipkin</groupId>
-    <artifactId>zipkin-starter-mininimal</artifactId>
+    <artifactId>zipkin-starter-minimal</artifactId>
     <name>Fabric8 :: Zipkin :: Starter :: Minimal</name>
     <description>Starter module for installing Zipkin (minimal) into Kubernetes.</description>
 
