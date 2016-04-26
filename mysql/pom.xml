@@ -39,6 +39,8 @@
         <fabric8.service.zipkin-mysql.port>3306</fabric8.service.zipkin-mysql.port>
         <fabric8.service.zipkin-mysql.containerPort>3306</fabric8.service.zipkin-mysql.containerPort>
         <fabric8.service.zipkin-mysql.type>LoadBalancer</fabric8.service.zipkin-mysql.type>
+        <fabric8.readinessProbe.port>3306</fabric8.readinessProbe.port>
+        <fabric8.readinessProbe.initialDelaySeconds>5</fabric8.readinessProbe.initialDelaySeconds>
     </properties>
 
     <build>
