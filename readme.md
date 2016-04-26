@@ -16,11 +16,11 @@ There are 2 ways of doing that:
 
 To directly install everything you need:
 
-    kubectl create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter/0.0.7/zipkin-starter-0.0.7-kubernetes.yml
+    kubectl create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter/0.0.8/zipkin-starter-0.0.8-kubernetes.yml
 
 To directly install a minimal ZipKin *(just storage and query)*:
                         
-    kubectl create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter-minimal/0.0.7/zipkin-starter-minimal-0.0.7-kubernetes.yml
+    kubectl create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter-minimal/0.0.8/zipkin-starter-minimal-0.0.8-kubernetes.yml
 
 Both of the above are released in json format too.   
 
@@ -78,3 +78,12 @@ Once the zipkin-query pod is ready, you will be able to access the console using
 For example: http://zipkin-query-default.vagrant.f8 (here is how the external URL looks on openshift if zipkin-query service is available in the default namespace and the domain is vagrant.f8).
 
 ![ZipKin Console](images/zipkin-console.png "Zipkin Console")
+
+
+### Running the integration tests
+
+Some really basic integration tests have been added. The purpose of those tests is to check that configuration and images are working.
+The integration tests are based on [Fabric8 Arquillian](http://fabric8.io/guide/testing.html) and require an exsting Kubernetes/Openshift environment.
+So they are disabled by default. To enabled and run them:
+
+    mvn clean install -Dk8s.skip.test=false
