@@ -48,6 +48,9 @@
         <fabric8.service.zipkin-query-admin.port>9901</fabric8.service.zipkin-query-admin.port>
         <fabric8.service.zipkin-query-admin.containerPort>9901</fabric8.service.zipkin-query-admin.containerPort>
         <fabric8.service.zipkin-query-admin.type>LoadBalancer</fabric8.service.zipkin-query-admin.type>
+        <fabric8.readinessProbe.httpGet.path>/api/v1/services</fabric8.readinessProbe.httpGet.path>
+        <fabric8.readinessProbe.httpGet.port>9411</fabric8.readinessProbe.httpGet.port>
+        <fabric8.readinessProbe.initialDelaySeconds>5</fabric8.readinessProbe.initialDelaySeconds>
     </properties>
 
     <dependencies>
