@@ -1,7 +1,7 @@
 Kubernetes ZipKin
 -----------------
 
-The project provides all the required resources to start the required ZipKin components in Kubernetes.
+The project provides all the required resources to start the required [ZipKin](http://zipkin.io/) components in [Kubernetes](http://kubernetes.io/) to trace your microservices.
 
 ### Getting Started
 
