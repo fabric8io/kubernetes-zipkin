@@ -3,6 +3,8 @@ Kubernetes ZipKin
 
 The project provides all the required resources to start the required [ZipKin](http://zipkin.io/) components in [Kubernetes](http://kubernetes.io/) to trace your microservices.
 
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.fabric8.zipkin/zipkin-starter-minimal/badge.svg?style=flat-square)](https://maven-badges.herokuapp.com/maven-central/io.fabric8.zipkin/zipkin-starter-minimal/) ![Apache 2](http://img.shields.io/badge/license-Apache%202-red.svg)
+
 ### Getting Started
 
 To install ZipKin in kubernetes you need to create the replication controllers and services that corresponds to the ZipKin components and their requirements.
