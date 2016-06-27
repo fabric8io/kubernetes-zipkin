@@ -26,7 +26,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.fabric8.zipkin.examples</groupId>
-    <artifactId>zipkin-hello-world-example</artifactId>
+    <artifactId>zipkin-hello-world</artifactId>
     <name>Fabric8 :: Zipkin :: Examples :: Hello World</name>
     <description>Zipkin Hello World example</description>
 
