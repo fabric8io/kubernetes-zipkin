@@ -75,7 +75,7 @@
 
     <properties>
         <!-- Dependency Versions -->
-        <fabric8.version>2.2.145</fabric8.version>
+        <fabric8.version>2.2.164</fabric8.version>
         <zipkin.version>1.39.3</zipkin.version>
         <junit.version>4.12</junit.version>
         <!-- Maven Plugin Versions -->
@@ -135,7 +135,7 @@
             <plugin>
                 <groupId>io.fabric8</groupId>
                 <artifactId>fabric8-maven-plugin</artifactId>
-                <version>${fabric8.version}</version>
+                <version>${fabric8-maven-plugin.version}</version>
             </plugin>
             <plugin>
                 <groupId>io.fabric8</groupId>
