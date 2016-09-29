@@ -17,9 +17,9 @@
 package io.fabric8.zipkin.starter.minimal;
 
 
-import com.squareup.okhttp.OkHttpClient;
-import com.squareup.okhttp.Request;
-import com.squareup.okhttp.Response;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 import io.fabric8.annotations.ServiceName;
 import io.fabric8.arquillian.kubernetes.Session;
 import io.fabric8.kubernetes.api.KubernetesHelper;
@@ -53,7 +53,19 @@ public class ZipkinMinimalKubernetesTest {
             Assert.assertNotNull(response);
             Assert.assertEquals(200, response.code());
         } finally {
-            httpClient.getDispatcher().getExecutorService().shutdown();
+            close(httpClient);
+        }
+    }
+
+    private void close(OkHttpClient httpClient) {
+        if (httpClient.connectionPool() != null) {
+            httpClient.connectionPool().evictAll();
+        }
+        if (httpClient.dispatcher() != null &&
+                httpClient.dispatcher().executorService() != null &&
+                !httpClient.dispatcher().executorService().isShutdown()
+                ) {
+            httpClient.dispatcher().executorService().shutdown();
         }
     }
 }
