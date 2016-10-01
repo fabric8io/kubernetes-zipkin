@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
   Copyright (C) 2016 to origin authors.
 
   Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,11 +12,7 @@
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
   limitations under the License.
-  -->
-
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  --><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>zipkin-project</artifactId>
         <groupId>io.fabric8</groupId>
@@ -31,39 +26,27 @@
     <description>Zipkin MySQL storage</description>
 
     <properties>
-        <docker.maven.plugin.version>0.14.2</docker.maven.plugin.version>
-	<docker.from>docker.io/openzipkin/zipkin-mysql:${zipkin.version}</docker.from>
+        <docker.from>docker.io/openzipkin/zipkin-mysql:${zipkin.version}</docker.from>
         <docker.image>fabric8/zipkin-mysql:${project.version}</docker.image>
 
-        <fabric8.service.name>${project.artifactId}</fabric8.service.name>
-        <fabric8.service.zipkin-mysql.port>3306</fabric8.service.zipkin-mysql.port>
-        <fabric8.service.zipkin-mysql.containerPort>3306</fabric8.service.zipkin-mysql.containerPort>
-        <fabric8.service.zipkin-mysql.type>LoadBalancer</fabric8.service.zipkin-mysql.type>
-        <fabric8.readinessProbe.port>3306</fabric8.readinessProbe.port>
-        <fabric8.readinessProbe.initialDelaySeconds>5</fabric8.readinessProbe.initialDelaySeconds>
-    </properties>
+        </properties>
 
     <build>
         <plugins>
             <plugin>
                 <groupId>io.fabric8</groupId>
                 <artifactId>fabric8-maven-plugin</artifactId>
-                <version>${fabric8.version}</version>
+                <version>${fabric8-maven-plugin.version}</version>
                 <executions>
                     <execution>
-                        <id>json</id>
-                        <phase>generate-resources</phase>
+                        <id>fmp</id>
                         <goals>
-                            <goal>json</goal>
-                            <goal>attach</goal>
+                            <goal>resource</goal>
+                            <goal>helm</goal>
+                            <goal>build</goal>
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <groupId>io.fabric8</groupId>
-                <artifactId>docker-maven-plugin</artifactId>
-                <version>${docker.maven.plugin.version}</version>
                 <configuration>
                     <images>
                         <image>
@@ -75,18 +58,19 @@
                                         <args>/usr/bin/mysqld</args>
                                         <args>--basedir=/usr/</args>
                                         <args>--datadir=/mysql/data</args>
-					<args>--user=root</args>
+                                        <args>--user=root</args>
                                     </exec>
                                 </entryPoint>
                                 <runCmds>
-                                  <run>find /mysql -type d -exec chmod 777 {} \;</run>
-                                  <run>find /mysql -type f -exec chmod 666 {} \;</run>
+                                    <run>find /mysql -type d -exec chmod 777 {} \;</run>
+                                    <run>find /mysql -type f -exec chmod 666 {} \;</run>
                                 </runCmds>
                             </build>
                         </image>
                     </images>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 </project>

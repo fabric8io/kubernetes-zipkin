@@ -1,0 +1,21 @@
+---
+apiVersion: "v1"
+kind: "Service"
+metadata:
+  labels:
+    project: "${project.artifactId}"
+    provider: "fabric8"
+    version: "2.2.108"
+    group: "io.fabric8.ipaas.apps"
+    package: "zipkin-starter-mysql"
+  name: "zookeeper"
+spec:
+  ports:
+  - name: "client"
+    port: 2181
+    targetPort: 2181
+  selector:
+    project: "zookeeper"
+    provider: "fabric8"
+    group: "io.fabric8.ipaas.apps"
+  type: "LoadBalancer"
