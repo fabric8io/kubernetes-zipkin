@@ -268,7 +268,7 @@
         <profile>
             <id>f8-build</id>
             <build>
-                <defaultGoal>clean install docker:build fabric8:json</defaultGoal>
+                <defaultGoal>clean install fabric8:resource fabric8:build</defaultGoal>
             </build>
         </profile>
         <profile>
@@ -278,7 +278,7 @@
                 <fabric8.recreate>true</fabric8.recreate>
             </properties>
             <build>
-                <defaultGoal>clean install docker:build docker:push fabric8:json fabric8:apply</defaultGoal>
+                <defaultGoal>clean install  fabric8:resource fabric8:build fabric8:push fabric8:apply</defaultGoal>
             </build>
         </profile>
         <profile>
@@ -287,7 +287,7 @@
                 <fabric8.recreate>true</fabric8.recreate>
             </properties>
             <build>
-                <defaultGoal>clean package docker:build fabric8:json fabric8:apply</defaultGoal>
+                <defaultGoal>clean package fabric8:resource fabric8:build fabric8:apply</defaultGoal>
             </build>
         </profile>
         <profile>
