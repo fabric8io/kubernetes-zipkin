@@ -61,6 +61,12 @@
             <version>${ipaas.version}</version>
             <classifier>kubernetes</classifier>
             <type>json</type>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
@@ -69,6 +75,12 @@
             <version>${ipaas.version}</version>
             <classifier>kubernetes</classifier>
             <type>json</type>
+            <exclusions>
+                <exclusion>
+                    <groupId>*</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
     </dependencies>
 
