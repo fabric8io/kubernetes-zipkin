@@ -40,7 +40,7 @@
         <spring-cloud-netflix.version>1.0.6.RELEASE</spring-cloud-netflix.version>
 
         <!-- Maven Plugin Versions -->
-        <docker-maven-plugin.version>0.14.2</docker-maven-plugin.version>
+        <docker-maven-plugin.version>0.16.5</docker-maven-plugin.version>
         <jetty-maven-plugin.version>9.3.7.v20160115</jetty-maven-plugin.version>
         <maven-compiler-plugin.version>3.5</maven-compiler-plugin.version>
         <maven-war-plugin.version>2.6</maven-war-plugin.version>
