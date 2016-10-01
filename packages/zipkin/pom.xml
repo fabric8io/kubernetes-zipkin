@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!--
   Copyright (C) 2016 to origin authors.
 
   Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,11 +12,7 @@
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
   limitations under the License.
-  -->
-
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  --><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>packages</artifactId>
         <groupId>io.fabric8.zipkin</groupId>
@@ -32,8 +27,7 @@
 
     <properties>
         <ipaas.version>2.2.108</ipaas.version>
-        <fabric8.combineDependencies>true</fabric8.combineDependencies>
-    </properties>
+        </properties>
 
     <dependencies>
         <dependency>
@@ -83,14 +77,14 @@
             <plugin>
                 <groupId>io.fabric8</groupId>
                 <artifactId>fabric8-maven-plugin</artifactId>
-                <version>${fabric8.version}</version>
+                <version>${fabric8-maven-plugin.version}</version>
                 <executions>
                     <execution>
-                        <id>json</id>
-                        <phase>generate-resources</phase>
+                        <id>fmp</id>
                         <goals>
-                            <goal>json</goal>
-                            <goal>attach</goal>
+                            <goal>resource</goal>
+                            <goal>helm</goal>
+                            <goal>build</goal>
                         </goals>
                     </execution>
                 </executions>
