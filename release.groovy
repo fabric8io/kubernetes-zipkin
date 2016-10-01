@@ -2,7 +2,8 @@
 def updateDependencies(source){
 
   def properties = []
-  properties << ['<fabric8-maven-plugin.version>','io/fabric8/fabric8-maven-plugin']
+  //This is affected by a bug, so we need to disable it temporarily.
+  //properties << ['<fabric8-maven-plugin.version>','io/fabric8/fabric8-maven-plugin']
   properties << ['<docker-maven-plugin.version>','io/fabric8/docker-maven-plugin']
 
   updatePropertyVersion{
