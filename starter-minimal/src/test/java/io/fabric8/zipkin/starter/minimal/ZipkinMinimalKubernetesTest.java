@@ -38,7 +38,7 @@ public class ZipkinMinimalKubernetesTest {
     @ArquillianResource
     Session session;
 
-    @ServiceName("zipkin-query")
+    @ServiceName("zipkin")
     @ArquillianResource
     Service service;
 

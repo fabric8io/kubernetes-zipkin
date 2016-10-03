@@ -8,7 +8,7 @@ metadata:
     version: "${project.version}"
     group: "io.fabric8.zipkin"
     package: "zipkin-starter-mysql"
-  name: "zipkin-query"
+  name: "zipkin"
 spec:
   replicas: 1
   selector:
@@ -39,8 +39,8 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: "metadata.namespace"
-        image: "openzipkin/zipkin-query:1.39.3"
-        name: "zipkin-query"
+        image: "openzipkin/zipkin:1.39.3"
+        name: "zipkin"
         readinessProbe:
           httpGet:
             path: "/api/v1/services"

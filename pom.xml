@@ -76,7 +76,7 @@
     <properties>
         <!-- Dependency Versions -->
         <fabric8.version>2.2.168</fabric8.version>
-        <zipkin.version>1.39.3</zipkin.version>
+        <zipkin.version>1.121.1</zipkin.version>
         <junit.version>4.12</junit.version>
         <!-- Maven Plugin Versions -->
         <fabric8-maven-plugin.version>3.1.59</fabric8-maven-plugin.version>
@@ -90,8 +90,7 @@
 
 
     <modules>
-        <module>collector</module>
-        <module>query</module>
+        <module>zipkin</module>
         <module>mysql</module>
         <module>starter</module>
         <module>starter-mysql</module>

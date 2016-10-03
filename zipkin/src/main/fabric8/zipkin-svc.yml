@@ -7,15 +7,14 @@ metadata:
     project: "${project.artifactId}"
     version: "${project.version}"
     group: "io.fabric8.zipkin"
-    package: "zipkin"
-  name: "zipkin-query"
+  name: "zipkin"
 spec:
   ports:
   - port: 9411
     protocol: "TCP"
     targetPort: 9411
   selector:
-    project: "zipkin-query"
+    project: "zipkin"
     provider: "fabric8"
     group: "io.fabric8.zipkin"
   type: "LoadBalancer"

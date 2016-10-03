@@ -52,9 +52,8 @@ So after using the above in a clean workspace, your workspace should look like t
 NAME | READY|STATUS|RESTARTS|AGE
 -----|------|------|--------|---
 kafka-qw13r|1/1|Running|0|8m
-zipkin-collector-5nopi|1/1|Running|0|8m
 zipkin-mysql-ygm1g|1/1|Running|0|8m
-zipkin-query-roxae|1/1|Running|0|8m
+zipkin-roxae|1/1|Running|0|8m
 zookeeper-1-my183|1/1|Running|0|8m
 zookeeper-2-jx8eq|1/1|Running|0|8m
 zookeeper-3-d1icz|1/1|Running|0|8m
@@ -71,13 +70,13 @@ This time the zipkin-collector, kafka and zookeeper will not be installed at all
 NAME | READY|STATUS|RESTARTS|AGE
 -----|------|------|--------|---
 zipkin-mysql-d4msa|1/1|Running|0|8m
-zipkin-query-rpxfw|1/1|Running|0|8m
+zipkin-rpxfw|1/1|Running|0|8m
 
 ### Using the console
 
-Once the zipkin-query pod is ready, you will be able to access the console using the zipkin-query service.
+Once the zipkin pod is ready, you will be able to access the console using the zipkin service.
 
-For example: http://zipkin-query-default.vagrant.f8 (here is how the external URL looks on openshift if zipkin-query service is available in the default namespace and the domain is vagrant.f8).
+For example: http://zipkin-default.vagrant.f8 (here is how the external URL looks on openshift if zipkin service is available in the default namespace and the domain is vagrant.f8).
 
 ![ZipKin Console](images/zipkin-console.png "Zipkin Console")
 

@@ -40,7 +40,7 @@
 
         <dependency>
             <groupId>io.fabric8.zipkin</groupId>
-            <artifactId>zipkin-query</artifactId>
+            <artifactId>zipkin</artifactId>
             <version>${project.version}</version>
             <classifier>kubernetes</classifier>
             <type>json</type>
