@@ -76,10 +76,11 @@
     <properties>
         <!-- Dependency Versions -->
         <fabric8.version>2.2.168</fabric8.version>
-        <zipkin.version>1.121.1</zipkin.version>
+        <zipkin.version>1.13.0</zipkin.version>
+        <zipkin.revision>ff13a9c15f3d0e9a72fc5dc837202746e093bb09</zipkin.revision>
         <junit.version>4.12</junit.version>
         <!-- Maven Plugin Versions -->
-        <fabric8-maven-plugin.version>3.1.59</fabric8-maven-plugin.version>
+        <fabric8-maven-plugin.version>3.1.63</fabric8-maven-plugin.version>
         <maven-jar-plugin.version>2.6</maven-jar-plugin.version>
         <maven-compiler-plugin.version>3.5</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>2.18.1</maven-surefire-plugin.version>

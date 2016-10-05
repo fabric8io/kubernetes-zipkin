@@ -26,32 +26,20 @@
     <description>Starter module for installing Zipkin into Kubernetes</description>
 
     <properties>
-        <ipaas.version>2.2.108</ipaas.version>
-        </properties>
+        <ipaas.version>2.2.153</ipaas.version>
+    </properties>
 
     <dependencies>
         <dependency>
             <groupId>io.fabric8.zipkin</groupId>
-            <artifactId>zipkin-collector</artifactId>
-            <version>${project.version}</version>
-            <classifier>kubernetes</classifier>
-            <type>json</type>
-        </dependency>
-
-        <dependency>
-            <groupId>io.fabric8.zipkin</groupId>
             <artifactId>zipkin</artifactId>
             <version>${project.version}</version>
-            <classifier>kubernetes</classifier>
-            <type>json</type>
         </dependency>
 
         <dependency>
             <groupId>io.fabric8.zipkin</groupId>
             <artifactId>zipkin-mysql</artifactId>
             <version>${project.version}</version>
-            <classifier>kubernetes</classifier>
-            <type>json</type>
         </dependency>
 
         <!-- We also need ZooKeeper and Kafka and we'll just used them from ipaas -->
@@ -59,16 +47,12 @@
             <groupId>io.fabric8.ipaas.apps</groupId>
             <artifactId>zookeeper</artifactId>
             <version>${ipaas.version}</version>
-            <classifier>kubernetes</classifier>
-            <type>json</type>
         </dependency>
 
         <dependency>
             <groupId>io.fabric8.ipaas.apps</groupId>
             <artifactId>kafka</artifactId>
             <version>${ipaas.version}</version>
-            <classifier>kubernetes</classifier>
-            <type>json</type>
         </dependency>
 
         <!-- Testing -->
@@ -110,6 +94,13 @@
                 <groupId>io.fabric8</groupId>
                 <artifactId>fabric8-maven-plugin</artifactId>
                 <version>${fabric8-maven-plugin.version}</version>
+                <configuration>
+                    <enricher>
+                        <excludes>
+                            <exclude>fmp-controller</exclude>
+                        </excludes>
+                    </enricher>
+                </configuration>
                 <executions>
                     <execution>
                         <id>fmp</id>

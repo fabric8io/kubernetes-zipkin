@@ -65,7 +65,7 @@ The minimal starter will generate and install a Zipkin without a collector and u
     mvn clean install
     mvn fabric8:apply -pl starter-minimal
 
-This time the zipkin-collector, kafka and zookeeper will not be installed at all.
+This time kafka and zookeeper will not be installed at all.
 
 NAME | READY|STATUS|RESTARTS|AGE
 -----|------|------|--------|---
