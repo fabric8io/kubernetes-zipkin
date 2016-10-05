@@ -51,13 +51,14 @@ spec:
             cpu: "0"
             memory: "0"
         volumeMounts:
-        - name: mysql-persistent-storage
+        - name: mysql-data
           mountPath: /var/lib/mysql
         - name: mysql-init-script
           mountPath: /docker-entrypoint-initdb.d/
       volumes:
-      - name: mysql-persistent-storage
-        emptyDir: {}
+      - name: mysql-data
+        persistentVolumeClaim:
+          claimName: mysql-data
       - name: mysql-init-script
         configMap:
           name: zipkin-mysql-initdb
