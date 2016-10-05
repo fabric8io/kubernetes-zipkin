@@ -46,28 +46,6 @@
                         </goals>
                     </execution>
                 </executions>
-                <configuration>
-                    <images>
-                        <image>
-                            <name>${docker.image}</name>
-                            <build>
-                                <from>${docker.from}</from>
-                                <entryPoint>
-                                    <exec>
-                                        <args>/usr/bin/mysqld</args>
-                                        <args>--basedir=/usr/</args>
-                                        <args>--datadir=/mysql/data</args>
-                                        <args>--user=root</args>
-                                    </exec>
-                                </entryPoint>
-                                <runCmds>
-                                    <run>find /mysql -type d -exec chmod 777 {} \;</run>
-                                    <run>find /mysql -type f -exec chmod 666 {} \;</run>
-                                </runCmds>
-                            </build>
-                        </image>
-                    </images>
-                </configuration>
             </plugin>
         </plugins>
     </build>
@@ -87,30 +65,6 @@
                                 <goals>
                                     <goal>resource</goal>
                                     <goal>helm</goal>
-                                    <goal>build</goal>
-                                    <goal>push</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>docker</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>io.fabric8</groupId>
-                        <artifactId>fabric8-maven-plugin</artifactId>
-                        <version>${fabric8-maven-plugin.version}</version>
-                        <executions>
-                            <execution>
-                                <id>fmp</id>
-                                <goals>
-                                    <goal>resource</goal>
-                                    <goal>helm</goal>
-                                    <goal>build</goal>
                                 </goals>
                             </execution>
                         </executions>
