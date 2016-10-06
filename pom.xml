@@ -27,7 +27,7 @@
 
     <groupId>io.fabric8</groupId>
     <artifactId>zipkin-project</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.1.5</version>
     <packaging>pom</packaging>
     <name>Fabric8 :: Zipkin :: Project</name>
 
