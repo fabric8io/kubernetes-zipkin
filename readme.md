@@ -1,7 +1,9 @@
 Kubernetes ZipKin
 -----------------
 
-The project provides all the required resources to start the required [ZipKin](http://zipkin.io/) components in [Kubernetes](http://kubernetes.io/) to trace your microservices.
+The project provides all the required resources to start the required [ZipKin](http://zipkin.io/) components in [Kubernetes](http://kubernetes.io/) and [Openshift](https://www.openshift.com) to trace your microservices.
+
+It has been also tested against [Minikube](https://github.com/kubernetes/minikube) and [Minishift](https://github.com/jimmidyson/minishift).
 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.fabric8.zipkin/zipkin-starter-minimal/badge.svg?style=flat-square)](https://maven-badges.herokuapp.com/maven-central/io.fabric8.zipkin/zipkin-starter-minimal/) ![Apache 2](http://img.shields.io/badge/license-Apache%202-red.svg)
 
@@ -18,13 +20,29 @@ There are 2 ways of doing that:
 
 To directly install everything you need:
 
-    kubectl create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter/0.0.8/zipkin-starter-0.0.8-kubernetes.yml
+    kubectl create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter/0.1.4/zipkin-starter-0.1.4-kubernetes.yml
+    
+or if you are using openshift:
+    
+    oc create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter/0.1.4/zipkin-starter-0.1.4-openshift.yml
 
 To directly install a minimal ZipKin *(just storage and query)*:
                         
-    kubectl create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter-minimal/0.0.8/zipkin-starter-minimal-0.0.8-kubernetes.yml
+    kubectl create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter-minimal/0.1.4/zipkin-starter-minimal-0.1.4-kubernetes.yml
+    
+or if you are using openshift:
+    
+    oc create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter-minimal/0.1.4/zipkin-starter-minimal-0.1.4-openshift.yml
 
-Both of the above are released in json format too.   
+Both of the above are released in json format too.
+
+Zipkin uses a storage backend (it can be mysql, cassandra or elastic search, but currently this project only supports mysql). The storage requires a persistence volume.
+So the next step is to create it. So you either need to create a persistence volume named `mysql-data`.
+
+Or if you are using [gofabric8](https://github.com/fabric8io/gofabric8), it can automatically create it for you:
+ 
+    gofrabric8 volumes 
+
 
 ### Generating the configuration
 
