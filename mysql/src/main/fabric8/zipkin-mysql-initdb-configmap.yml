@@ -55,4 +55,4 @@ data:
 
     ALTER TABLE zipkin_dependencies ADD UNIQUE KEY(`day`, `parent`, `child`);
     GRANT SELECT, INSERT, UPDATE, DELETE ON zipkin.* TO zipkin@'%' IDENTIFIED BY 'zipkin' WITH GRANT OPTION ;
-    FLUSH PRIVILEGES ;
+    FLUSH PRIVILEGES;

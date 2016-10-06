@@ -37,7 +37,7 @@ spec:
           valueFrom:
             fieldRef:
               fieldPath: "metadata.namespace"
-        image: "mysql"
+        image: "mysql:5.7"
         name: "zipkin-mysql"
         readinessProbe:
           initialDelaySeconds: 5
@@ -55,6 +55,8 @@ spec:
           mountPath: /var/lib/mysql
         - name: mysql-init-script
           mountPath: /docker-entrypoint-initdb.d/
+        - name:  mysql-confd
+          mountPath: /etc/mysql/conf.d/
       volumes:
       - name: mysql-data
         persistentVolumeClaim:
@@ -62,3 +64,6 @@ spec:
       - name: mysql-init-script
         configMap:
           name: zipkin-mysql-initdb
+      - name: mysql-confd
+        configMap:
+          name: zipkin-mysql-cnf

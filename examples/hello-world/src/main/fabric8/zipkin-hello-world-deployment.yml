@@ -31,6 +31,7 @@ spec:
               fieldPath: "metadata.namespace"
         image: "fabric8/zipkin-hello-world:${project.version}"
         name: "zipkin-hello-world"
+        serviceAccountName: "fabric8"
         ports:
         - containerPort: 8080
           name: "http"
