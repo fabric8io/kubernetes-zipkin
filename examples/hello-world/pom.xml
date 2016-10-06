@@ -25,25 +25,54 @@
     <name>Fabric8 :: Zipkin :: Examples :: Hello World</name>
     <description>Zipkin Hello World example</description>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-netflix-dependencies</artifactId>
+                <version>${spring-cloud-netflix.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-sleuth-dependencies</artifactId>
+                <version>${spring-cloud-sleuth.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <properties>
         <!-- Docker / K8s Properties -->
         <docker.from>docker.io/java:8u40</docker.from>
         <docker.image>fabric8/${project.artifactId}:${project.version}</docker.image>
         <!-- Dependency Versions -->
-        <fabric8-maven-plugin.version>3.1.59</fabric8-maven-plugin.version>
-        <kubernetes-client.version>1.3.74</kubernetes-client.version>
+        <fabric8-maven-plugin.version>3.1.63</fabric8-maven-plugin.version>
+        <kubernetes-client.version>1.4.14</kubernetes-client.version>
 
-        <spring-boot.version>1.3.3.RELEASE</spring-boot.version>
-        <spring-cloud.version>1.0.4.RELEASE</spring-cloud.version>
-        <spring-cloud-kubernetes.version>0.0.5</spring-cloud-kubernetes.version>
-        <spring-cloud-sleuth.version>1.0.0.RC1</spring-cloud-sleuth.version>
-        <spring-cloud-netflix.version>1.0.6.RELEASE</spring-cloud-netflix.version>
+        <spring-boot.version>1.4.0.RELEASE</spring-boot.version>
+        <spring-cloud.version>Brixton.SR5</spring-cloud.version>
+        <spring-cloud-commons.version>1.1.1.RELEASE</spring-cloud-commons.version>
+        <spring-cloud-kubernetes.version>0.0.16</spring-cloud-kubernetes.version>
+        <spring-cloud-netflix.version>1.1.5.RELEASE</spring-cloud-netflix.version>
+        <spring-cloud-sleuth.version>1.0.6.RELEASE</spring-cloud-sleuth.version>
 
         <!-- Maven Plugin Versions -->
         <jetty-maven-plugin.version>9.3.7.v20160115</jetty-maven-plugin.version>
+        <maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
         <maven-compiler-plugin.version>3.5</maven-compiler-plugin.version>
         <maven-war-plugin.version>2.6</maven-war-plugin.version>
-
     </properties>
 
     <dependencies>
@@ -66,9 +95,15 @@
         </dependency>
 
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <version>${spring-boot.version}</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-commons</artifactId>
-            <version>${spring-cloud.version}</version>
+            <version>${spring-cloud-commons.version}</version>
         </dependency>
 
     </dependencies>
@@ -89,6 +124,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version>
                 <executions>
                     <execution>
                         <goals>
@@ -99,7 +135,9 @@
             </plugin>
             <plugin>
                 <!--skip deploy -->
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
+                <version>${maven-deploy-plugin.version}</version>
                 <configuration>
                     <skip>true</skip>
                 </configuration>
@@ -107,6 +145,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven-compiler-plugin.version}</version>
                 <configuration>
                     <source>1.8</source>
                     <target>1.8</target>
