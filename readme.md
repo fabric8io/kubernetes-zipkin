@@ -32,7 +32,7 @@ To directly install a minimal ZipKin *(just storage and query)*:
     
 or if you are using openshift:
     
-    oc create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter-minimal/0.1.4/zipkin-starter-minimal-0.1.4-openshift.yml
+    oc create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter-minimal/0.1.5/zipkin-starter-minimal-0.1.5-openshift.yml
 
 Both of the above are released in json format too.
 
