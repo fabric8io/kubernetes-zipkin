@@ -103,11 +103,11 @@ For example: http://zipkin-default.vagrant.f8 (here is how the external URL look
 As of 0.1.5 kubernetes-zipkin comes with prometheus annotations, so that the the zipkin server is monitored by prometheus.
 You can easily try out this feature by installing prometheus:
 
-    kubectel create -f http://repo1.maven.org/maven2/io/fabric8/devops/apps/prometheus/2.2.259/prometheus-2.2.259-kubernetes.yml
+    kubectl create -f http://repo1.maven.org/maven2/io/fabric8/devops/apps/prometheus/2.2.259/prometheus-2.2.259-kubernetes.yml
     
-or on openshift
+or on openshift:
 
-   kubernetes create -f http://repo1.maven.org/maven2/io/fabric8/devops/apps/prometheus/2.2.259/prometheus-2.2.259-openshift.yml
+    oc create -f http://repo1.maven.org/maven2/io/fabric8/devops/apps/prometheus/2.2.259/prometheus-2.2.259-openshift.yml
    
 ### Running the integration tests
 
