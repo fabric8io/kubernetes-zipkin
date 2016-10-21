@@ -75,7 +75,7 @@
 
     <properties>
         <!-- Dependency Versions -->
-        <fabric8.version>2.2.168</fabric8.version>
+        <fabric8.version>2.2.170</fabric8.version>
         <zipkin.version>1.13.0</zipkin.version>
         <zipkin.revision>ff13a9c15f3d0e9a72fc5dc837202746e093bb09</zipkin.revision>
         <junit.version>4.12</junit.version>
