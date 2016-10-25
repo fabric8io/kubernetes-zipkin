@@ -80,7 +80,7 @@
         <zipkin.revision>ff13a9c15f3d0e9a72fc5dc837202746e093bb09</zipkin.revision>
         <junit.version>4.12</junit.version>
         <!-- Maven Plugin Versions -->
-        <fabric8-maven-plugin.version>3.1.63</fabric8-maven-plugin.version>
+        <fabric8.maven.plugin.version>3.1.79</fabric8.maven.plugin.version>
         <maven-jar-plugin.version>2.6</maven-jar-plugin.version>
         <maven-compiler-plugin.version>3.5</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>2.18.1</maven-surefire-plugin.version>
@@ -134,7 +134,7 @@
             <plugin>
                 <groupId>io.fabric8</groupId>
                 <artifactId>fabric8-maven-plugin</artifactId>
-                <version>${fabric8-maven-plugin.version}</version>
+                <version>${fabric8.maven.plugin.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
