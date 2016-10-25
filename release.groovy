@@ -2,8 +2,9 @@
 def updateDependencies(source){
 
   def properties = []
-  properties << ['<fabric8.version>','io/fabric8/kubernetes-generator']
-  properties << ['<fabric8.maven.plugin.version>','io/fabric8/fabric8-maven-plugin']
+  // the FIS releases breaks this logic
+  // properties << ['<fabric8.version>','io/fabric8/kubernetes-generator']
+  // properties << ['<fabric8.maven.plugin.version>','io/fabric8/fabric8-maven-plugin']
 
   updatePropertyVersion{
     updates = properties
