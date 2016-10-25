@@ -41,7 +41,7 @@ def release(project){
     artifactExtensionToWatchInCentral = 'jar'
     promoteToDockerRegistry = 'docker.io'
     dockerOrganisation = 'fabric8'
-    imagesToPromoteToDockerHub = ['zipkin-mysql']
+    imagesToPromoteToDockerHub = []
     extraImagesToTag = null
   }
 }
