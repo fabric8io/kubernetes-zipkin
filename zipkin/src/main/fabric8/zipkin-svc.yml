@@ -6,6 +6,7 @@ metadata:
     prometheus.io/scrape: 'true'
     prometheus.io/path:   /prometheus
     prometheus.io/port:   '9411'
+    fabric8.io/app-menu: management
   labels:
     provider: "fabric8"
     project: "${project.artifactId}"
@@ -14,7 +15,7 @@ metadata:
   name: "zipkin"
 spec:
   ports:
-  - port: 9411
+  - port: 80
     protocol: "TCP"
     targetPort: 9411
   selector:
