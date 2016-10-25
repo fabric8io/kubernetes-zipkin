@@ -15,7 +15,7 @@ metadata:
   name: "zipkin"
 spec:
   ports:
-  - port: 9411
+  - port: 80
     protocol: "TCP"
     targetPort: 9411
   selector:
