@@ -74,6 +74,9 @@
     </distributionManagement>
 
     <properties>
+        <!-- lets disable S2I for our releases -->
+        <fabric8.mode>kubernetes</fabric8.mode>
+
         <!-- Dependency Versions -->
         <fabric8.version>2.2.170</fabric8.version>
         <zipkin.version>1.13.0</zipkin.version>
