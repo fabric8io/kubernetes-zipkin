@@ -6,6 +6,7 @@ metadata:
     prometheus.io/scrape: 'true'
     prometheus.io/path:   /prometheus
     prometheus.io/port:   '9411'
+    fabric8.io/app-menu: management
   labels:
     provider: "fabric8"
     project: "${project.artifactId}"
