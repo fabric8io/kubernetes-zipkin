@@ -9,7 +9,7 @@ It has been also tested against [Minikube](https://github.com/kubernetes/minikub
 
 ### Getting Started
 
-To install ZipKin in kubernetes you need to create the replication controllers and services that corresponds to the ZipKin components and their requirements.
+To install ZipKin in kubernetes you need to create the deployment and services that corresponds to the ZipKin components and their requirements.
 
 There are 2 ways of doing that:
 
@@ -21,17 +21,17 @@ There are 2 ways of doing that:
 To directly install everything you need:
 
     kubectl create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter/0.1.5/zipkin-starter-0.1.5-kubernetes.yml
-    
+
 or if you are using openshift:
-    
+
     oc create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter/0.1.5/zipkin-starter-0.1.5-openshift.yml
 
 To directly install a minimal ZipKin *(just storage and query)*:
-                        
+
     kubectl create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter-minimal/0.1.5/zipkin-starter-minimal-0.1.5-kubernetes.yml
-    
+
 or if you are using openshift:
-    
+
     oc create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter-minimal/0.1.5/zipkin-starter-minimal-0.1.5-openshift.yml
 
 Both of the above are released in json format too.
@@ -40,8 +40,8 @@ Zipkin uses a storage backend (it can be mysql, cassandra or elastic search, but
 So the next step is to create it. So you either need to create a persistence volume named `mysql-data`.
 
 Or if you are using [gofabric8](https://github.com/fabric8io/gofabric8), it can automatically create it for you:
- 
-    gofrabric8 volumes 
+
+    gofabric8 volumes
 
 
 ### Generating the configuration
@@ -58,8 +58,8 @@ Currently the available starters are:
 
 The mysql starter will generate and install Zipkin using MySQL as a storage module.
 
-    mvn clean install -Pdocker
-    mvn fabric8:apply -pl starter-mysql
+    mvn clean install
+    mvn fabric8:deploy -pl starter-mysql
 
 The first command will build the whole project and the second will apply the resources to kubernetes (including its dependencies).
 So after using the above in a clean workspace, your workspace should look like this:
@@ -81,7 +81,7 @@ zookeeper-3-d1icz|1/1|Running|0|8m
 The minimal starter will generate and install a Zipkin without a collector and using MySQL as a storage module. This can be also "considered" a dev mode.
 
     mvn clean install
-    mvn fabric8:apply -pl starter-minimal
+    mvn fabric8:deploy -pl starter-minimal
 
 This time kafka and zookeeper will not be installed at all.
 
@@ -104,15 +104,15 @@ As of 0.1.5 kubernetes-zipkin comes with prometheus annotations, so that the the
 You can easily try out this feature by installing prometheus:
 
     kubectl create -f http://repo1.maven.org/maven2/io/fabric8/devops/apps/prometheus/2.2.259/prometheus-2.2.259-kubernetes.yml
-    
+
 or on openshift:
 
     oc create -f http://repo1.maven.org/maven2/io/fabric8/devops/apps/prometheus/2.2.259/prometheus-2.2.259-openshift.yml
-   
+
 ### Running the integration tests
 
 Some really basic integration tests have been added. The purpose of those tests is to check that configuration and images are working.
-The integration tests are based on [Fabric8 Arquillian](http://fabric8.io/guide/testing.html) and require an exsting Kubernetes/Openshift environment.
+The integration tests are based on [Fabric8 Arquillian](http://fabric8.io/guide/testing.html) and require an existing Kubernetes/Openshift environment.
 So they are disabled by default. To enabled and run them:
 
     mvn clean install -Dk8s.skip.test=false
