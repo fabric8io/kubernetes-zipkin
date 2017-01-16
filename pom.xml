@@ -79,8 +79,8 @@
 
         <!-- Dependency Versions -->
         <fabric8.version>2.2.192</fabric8.version>
-        <zipkin.version>1.13.0</zipkin.version>
-        <zipkin.revision>ff13a9c15f3d0e9a72fc5dc837202746e093bb09</zipkin.revision>
+        <zipkin.version>1.19.2</zipkin.version>
+        <zipkin.revision>20b18e99e9777c457ce464afbfc03a1e7e7caaa8</zipkin.revision>
         <junit.version>4.12</junit.version>
         <!-- Maven Plugin Versions -->
         <fabric8.maven.plugin.version>3.1.79</fabric8.maven.plugin.version>
