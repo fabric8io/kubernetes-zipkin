@@ -189,7 +189,7 @@ If you want to get involved, get help or contribute, please find below some usef
 
 Some useful links:
 
-- [Zipkin Organization on Github](https://github.com/openzipkin4)
+- [Zipkin Organization on Github](https://github.com/openzipkin)
 - [Zipkin channel on Gitter](https://gitter.im/openzipkin/zipkin)
 
 #### Kubernetes
