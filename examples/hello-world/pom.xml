@@ -58,7 +58,7 @@
         <docker.from>docker.io/java:8u40</docker.from>
         <docker.image>fabric8/${project.artifactId}:${project.version}</docker.image>
         <!-- Dependency Versions -->
-        <fabric8.maven.plugin.version>3.1.79</fabric8.maven.plugin.version>
+        <fabric8.maven.plugin.version>3.2.28</fabric8.maven.plugin.version>
         <kubernetes-client.version>1.4.14</kubernetes-client.version>
 
         <spring-boot.version>1.4.0.RELEASE</spring-boot.version>
