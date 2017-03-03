@@ -83,7 +83,7 @@
         <zipkin.revision>20b18e99e9777c457ce464afbfc03a1e7e7caaa8</zipkin.revision>
         <junit.version>4.12</junit.version>
         <!-- Maven Plugin Versions -->
-        <fabric8.maven.plugin.version>3.1.79</fabric8.maven.plugin.version>
+        <fabric8.maven.plugin.version>3.2.28</fabric8.maven.plugin.version>
         <maven-jar-plugin.version>2.6</maven-jar-plugin.version>
         <maven-compiler-plugin.version>3.5</maven-compiler-plugin.version>
         <maven-surefire-plugin.version>2.18.1</maven-surefire-plugin.version>
