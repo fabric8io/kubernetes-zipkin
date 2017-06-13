@@ -42,19 +42,19 @@ There are 2 ways of doing that:
 
 To directly install everything you need:
 
-    kubectl create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter/0.1.5/zipkin-starter-0.1.5-kubernetes.yml
+    kubectl create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter/0.1.9/zipkin-starter-0.1.9-kubernetes.yml
 
 or if you are using openshift:
 
-    oc create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter/0.1.5/zipkin-starter-0.1.5-openshift.yml
+    oc create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter/0.1.9/zipkin-starter-0.1.9-openshift.yml
 
 To directly install a minimal ZipKin *(just storage and query)*:
 
-    kubectl create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter-minimal/0.1.5/zipkin-starter-minimal-0.1.5-kubernetes.yml
+    kubectl create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter-minimal/0.1.9/zipkin-starter-minimal-0.1.9-kubernetes.yml
 
 or if you are using openshift:
 
-    oc create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter-minimal/0.1.5/zipkin-starter-minimal-0.1.5-openshift.yml
+    oc create -f http://repo1.maven.org/maven2/io/fabric8/zipkin/zipkin-starter-minimal/0.1.9/zipkin-starter-minimal-0.1.9-openshift.yml
 
 Both of the above are released in json format too.
 
@@ -174,11 +174,11 @@ Or for Openshift services, you may want to have a look at [Routes](https://docs.
 As of 0.1.5 kubernetes-zipkin comes with prometheus annotations, so that the the zipkin server is monitored by prometheus.
 You can easily try out this feature by installing prometheus:
 
-    kubectl create -f http://repo1.maven.org/maven2/io/fabric8/devops/apps/prometheus/2.2.259/prometheus-2.2.259-kubernetes.yml
+    kubectl create -f http://repo1.maven.org/maven2/io/fabric8/devops/apps/prometheus/2.2.331/prometheus-2.2.331-kubernetes.yml
 
 or on openshift:
 
-    oc create -f http://repo1.maven.org/maven2/io/fabric8/devops/apps/prometheus/2.2.259/prometheus-2.2.259-openshift.yml
+    oc create -f http://repo1.maven.org/maven2/io/fabric8/devops/apps/prometheus/2.2.331/prometheus-2.2.331-openshift.yml
 
 
 ### Community
