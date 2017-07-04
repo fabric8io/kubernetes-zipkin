@@ -78,7 +78,7 @@
         <fabric8.mode>kubernetes</fabric8.mode>
 
         <!-- Dependency Versions -->
-        <fabric8.version>2.2.216</fabric8.version>
+        <fabric8.version>2.2.217</fabric8.version>
         <zipkin.version>1.25.0</zipkin.version>
         <junit.version>4.12</junit.version>
         <!-- Maven Plugin Versions -->
